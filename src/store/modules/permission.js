@@ -8,7 +8,7 @@ function filterAsyncRoutes(asyncRouterMap) {
       if (route.component === 'Layout') {
         route.component = Layout
       } else {
-        route.component = require('@/viewpages/integrator/views/' + route.component + '.vue')
+        route.component = require('@I/views/' + route.component + '.vue')
         if (route.component.hasOwnProperty('default')) route.component = route.component.default
       }
     }

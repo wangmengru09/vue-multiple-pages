@@ -34,25 +34,25 @@ export const constantRoutes = [
     children: [
       {
         path: '/redirect/:path*',
-        component: resolve => require(['@/viewpages/integrator/views/redirect/index.vue'], resolve)
+        component: resolve => require(['@I/views/redirect/index.vue'], resolve)
       }
     ]
   },
   {
     path: '/home',
     name: 'homepage',
-    component: resolve => require(['@/viewpages/integrator/views/homepage/index.vue'], resolve),
+    component: resolve => require(['@I/views/homepage/index.vue'], resolve),
     hidden: true
   },
   {
     path: '/login',
     name: 'login',
-    component: resolve => require(['@/viewpages/integrator/views/login/index.vue'], resolve),
+    component: resolve => require(['@I/views/login/index.vue'], resolve),
     hidden: true
   },
   {
     path: '*',
-    component: resolve => require(['@/viewpages/integrator/views/404'], resolve),
+    component: resolve => require(['@I/views/404'], resolve),
     hidden: true
   },
   {
@@ -63,7 +63,7 @@ export const constantRoutes = [
   {
     path: '/sessionRedirect',
     name: 'SessionRedirect',
-    component: resolve => require(['@/viewpages/integrator/views/sessionRedirect/index.vue'], resolve),
+    component: resolve => require(['@I/views/sessionRedirect/index.vue'], resolve),
     hidden: true
   },
   {
@@ -83,7 +83,7 @@ export const constantRoutes = [
       {
         name: 'IntegratorDashboard',
         path: 'dashboard',
-        component: resolve => require(['@/viewpages/integrator/views/dashboard/integrator.vue'], resolve),
+        component: resolve => require(['@I/views/dashboard/integrator.vue'], resolve),
         meta: {
           affix: true,
           icon: 'dashboard',

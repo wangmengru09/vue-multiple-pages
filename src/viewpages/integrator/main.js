@@ -20,7 +20,11 @@ LicenseManager.setLicenseKey('Evaluation_License_Valid_Until__24_November_2018__
 
 import '@/icons' // icon
 import '@/directive/index'
+import '@I/permission'
 import i18n from '@/lang' // internationalization
+
+import base from '@/utils/base'
+Vue.use(base)
 
 // 引入 ErrorMsgDialog组件
 import ErrorMsgDialog from '@/components/ErrorMsgDialog/index'

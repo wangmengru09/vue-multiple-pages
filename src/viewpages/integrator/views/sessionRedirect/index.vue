@@ -2,7 +2,7 @@
   <div />
 </template>
 <script>
-// import { getUserInfo } from '@/api/common/user'
+import { getUserInfo } from '@/api/user'
 export default {
   name: 'SessionRedirect',
   data() {
@@ -80,18 +80,18 @@ export default {
   methods: {
     // 获取用户信息
     getUserInfo(sessionId) {
-      // getUserInfo({ sessionId }).then(res => {
-      //   const data = {
-      //     authUserVO: { ...res.data },
-      //     partyVo: { aggregatorLevel: true, shipperLevel: false, carrierLevel: false },
-      //     permissionSignMap: []
-      //   }
-      //   localStorage.setItem('asyncRoutes', JSON.stringify([]))
-      //   this.$store.dispatch('user/set_userInfo', data).then((userInfo) => {
-      //     this.$store.dispatch('permission/set_defaultSystem', 3)
-      //     this.$router.push('/')
-      //   })
-      // })
+      getUserInfo({ sessionId }).then(res => {
+        const data = {
+          authUserVO: { ...res.data },
+          partyVo: { aggregatorLevel: true, shipperLevel: false, carrierLevel: false },
+          permissionSignMap: []
+        }
+        localStorage.setItem('asyncRoutes', JSON.stringify([]))
+        this.$store.dispatch('user/set_userInfo', data).then((userInfo) => {
+          this.$store.dispatch('permission/set_defaultSystem', 3)
+          this.$router.push('/')
+        })
+      })
     },
     // 设置系统语言
     setLanguage(lang) {

@@ -66,6 +66,25 @@ export const constantRoutes = [
     component: resolve => require(['@I/views/sessionRedirect/index.vue'], resolve),
     hidden: true
   },
+  // {
+  //   path: '/list',
+  //   component: Layout,
+  //   redirect: '/list/index',
+  //   meta: {
+  //     titleCn: 'list',
+  //     titleEn: 'list'
+  //   },
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       meta: {
+  //         titleCn: 'list',
+  //         titleEn: 'list'
+  //       },
+  //       component: resolve => require(['@S/views/list/index.vue'], resolve)
+  //     }
+  //   ]
+  // },
   {
     path: '/integrator',
     name: 'IntegratorDashboardParent',
@@ -96,27 +115,118 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/list',
-    redirect: '/list/index',
+    path: '/financeSetting',
+    name: 'FinanceSetting',
     meta: {
-      icon: 'dashboard',
+      icon: 'financeSetting',
       systemLevel: 3,
-      titleCn: 'list',
-      titleEn: 'list',
-      id: '020'
+      titleCn: '财务设置',
+      titleEn: 'Finance Setting',
+      id: '006'
     },
+    redirect: '/financeSetting/rateCard/index',
     component: Layout,
     children: [
       {
-        path: 'index',
-        component: resolve => require(['@/viewpages/shipper/views/list/index.vue'], resolve),
+        path: 'rateCard',
+        name: 'FinanceRateCardIndex',
         meta: {
-          icon: 'dashboard',
+          icon: 'rateCard',
           systemLevel: 3,
-          titleCn: 'list',
-          titleEn: 'list',
-          id: '021'
-        }
+          titleCn: '价卡',
+          titleEn: 'Rate Card',
+          id: '007'
+        },
+        component: resolve => require(['@I/views/financeSetting/rateCard/index.vue'], resolve),
+        children: [
+          {
+            path: 'index',
+            name: 'FinanceRateCard',
+            meta: {
+              icon: 'rateCard',
+              systemLevel: 3,
+              titleCn: '价卡',
+              titleEn: 'Rate Card',
+              id: '0071',
+              breadCrumb: false
+            },
+            component: resolve => require(['@I/views/financeSetting/rateCard/RateCard.vue'], resolve)
+          },
+          {
+            path: 'info',
+            name: 'FinaceRateCardInfo',
+            hidden: true,
+            meta: {
+              id: '0072',
+              icon: 'rateCard',
+              systemLevel: 3,
+              titleCn: '价卡信息',
+              titleEn: 'Rate Card Info',
+              activeMenuId: '0071'
+            },
+            component: resolve => require(['@I/views/financeSetting/rateCard/RateCardInfo.vue'], resolve)
+          }
+        ]
+      },
+      {
+        path: 'surcharge',
+        name: 'FinanceSurcharge',
+        meta: {
+          icon: 'surcharge',
+          systemLevel: 3,
+          titleCn: '附加费',
+          titleEn: 'Surcharge',
+          id: '008'
+        },
+        component: resolve => require(['@I/views/financeSetting/surcharge/index.vue'], resolve)
+      },
+      {
+        path: 'tax',
+        name: 'FinanceSettingTax',
+        meta: {
+          icon: 'tax',
+          systemLevel: 3,
+          titleCn: '税费',
+          titleEn: 'Tax',
+          id: '003'
+        },
+        component: resolve => require(['@I/views/financeSetting/tax/index.vue'], resolve)
+      },
+      {
+        path: 'insurance',
+        name: 'FinanceSettingInsurance',
+        meta: {
+          icon: 'insurance',
+          systemLevel: 3,
+          titleCn: '保险',
+          titleEn: 'Insurance',
+          id: '004'
+        },
+        component: resolve => require(['@I/views/financeSetting/insurance/index.vue'], resolve)
+      },
+      {
+        path: 'chargeZone',
+        name: 'FinanceChargeZone',
+        meta: {
+          icon: 'chargeZone',
+          systemLevel: 3,
+          titleCn: '计费地区',
+          titleEn: 'Charge Zone',
+          id: '009'
+        },
+        component: resolve => require(['@I/views/financeSetting/chargeZone/index.vue'], resolve)
+      },
+      {
+        path: 'exchangeRate',
+        name: 'FinanceSettingExchangeRate',
+        meta: {
+          icon: 'exchangeRate',
+          systemLevel: 3,
+          titleCn: '汇率',
+          titleEn: 'Exchange Rate',
+          id: '005'
+        },
+        component: resolve => require(['@I/views/financeSetting/exchangeRate/index.vue'], resolve)
       }
     ]
   }

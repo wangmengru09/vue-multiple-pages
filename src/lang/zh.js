@@ -1,4 +1,5 @@
 import errorMessage from './message/zh'
+import financeSettingZh from './financeSetting/zh'
 import commonZh from './common/zh'
 import templateZh from './template/zh'
 
@@ -136,6 +137,7 @@ export default {
     ctrlV: 'ctrl n V'
   },
   ...errorMessage,
+  ...financeSettingZh,
   ...commonZh,
   ...templateZh
 }

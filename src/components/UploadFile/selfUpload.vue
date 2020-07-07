@@ -19,7 +19,7 @@
   </div>
 </template>
 <script>
-import { uploadFile } from '@/api/common/index'
+import { uploadFile } from '@/api/common'
 export default {
   props: {
     url: {

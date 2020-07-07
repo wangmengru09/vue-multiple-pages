@@ -1,4 +1,5 @@
 import errorMessage from './message/en'
+import financeSettingEn from './financeSetting/en'
 import commonEn from './common/en'
 import templateEn from './template/en'
 
@@ -143,6 +144,7 @@ export default {
     ctrlV: 'ctrl + V'
   },
   ...errorMessage,
+  ...financeSettingEn,
   ...commonEn,
   ...templateEn
 }

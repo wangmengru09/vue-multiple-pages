@@ -1,0 +1,42 @@
+// finance
+export const finance = {
+  // 保险
+  addInsuranceRate: '/insuranceRateConfig/add',
+  updateInsuranceRate: '/insuranceRateConfig/update',
+  getInsuranceRateList: '/insuranceRateConfig/queryByPage',
+  deleteInsuranceRate: '/insuranceRateConfig/delete',
+  // 汇率
+  getExchangeRateList: '/exchangeRate/queryByPage',
+  // 税费
+  getTaxList: '/taxConfig/queryByPage',
+  addTax: '/taxConfig/add',
+  updateTax: '/taxConfig/update',
+  updateTaxStatus: '/taxConfig/updateStatus',
+  getOneTax: '/taxConfig/queryByChannel',
+  getTaxStatus: '/type/activity/types',
+  getTaxRangeType: '/type/rangeValue/types',
+  // 计费区域
+  getChargeZoneData: '/zone/queryByPage',
+  getOneChargeZone: '/zone/queryOne',
+  operateChargeZone: '/zone',
+  // 附加费
+  getSurchargeList: '/surchargeMaintain/queryByPage',
+  getOneSurcharge: '/surchargeMaintain/queryOne',
+  getSurchargeUnit: '/type/surcharge/units',
+  addSurcharge: '/surchargeMaintain/add',
+  updateSurcharge: '/surchargeMaintain/update',
+  updateSurchargeStatus: '/surchargeMaintain/updateStatus',
+  // 价卡
+  getRateCardList: '/rateMaintain/queryByPage',
+  getOneRateCard: '/rateMaintain/queryOne',
+  updateRateCardStatus: '/rateMaintain/updateStatus',
+  addRateCard: '/rateMaintain/add',
+  updateRateCardInfo: '/rateMaintain/update',
+  addRateCardDetail: '/rateMaintain/add/item',
+  updateRateCardDetail: '/rateMaintain/update/item',
+  deleteRateCardDetails: '/rateMaintain/delete/items',
+  getChargeZoneOptions: '/zone/queryForSelect',
+  uploadRateCardDetail: '/rateMaintain/upload',
+  queryRateDetailItems: '/rateMaintain/queryDetailByItem',
+  downloadRateDetailItems: '/rateMaintain/details/download'
+}

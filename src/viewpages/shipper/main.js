@@ -25,6 +25,9 @@ import i18n from '@/lang' // internationalization
 // 引入 ErrorMsgDialog组件
 import ErrorMsgDialog from '@/components/ErrorMsgDialog/index'
 
+import base from '@/utils/base'
+Vue.use(base)
+
 // set ElementUI lang to EN
 Vue.use(ElementUI, {
   i18n: (key, value) => i18n.t(key, value)

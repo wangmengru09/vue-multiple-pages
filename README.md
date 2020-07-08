@@ -15,7 +15,7 @@ cd etower-Integrator
 npm install
 
 # develop
-npm run dev
+npm run dev (name)
 ```
 
 This will automatically open http://localhost:3000
@@ -25,16 +25,16 @@ This will automatically open http://localhost:3000
 
 ```bash
 # build for stage environment
-npm run build:stage
+npm run build:stage (name)
 
 # build for qa environment
-npm run build:qa
+npm run build:qa (name)
 
 # build for pre environment
-npm run build:pre
+npm run build:pre (name)
 
 # build for production environment
-npm run build:prod
+npm run build:prod (name)
 ```
 
 ## eslint
@@ -56,3 +56,4 @@ npm run lint -- --fix
 3. *.vue文件，template模块是页面的html（注意：template中的html只能有一个根div）。script是js代码。style是样式代码（注意：当前文件的样式，一定要加scoped属性，避免污染全局样式）。
 4. 变量：页面中的data中定义的复杂类型的变量，要移步到utils/data/financeSetting/chargeZone.js 中去定义。定义之后，在.vue页面的script中import进来，就可以使用了。
 5. 请求：在/api下面创建一个financeSetting文件夹，在此文件夹下面，新建chargeZone.js文件，
+6. TODO

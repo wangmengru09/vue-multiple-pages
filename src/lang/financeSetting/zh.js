@@ -6,7 +6,7 @@ export default {
     declareValue: '申报价值',
     insuranceRate: '保险费率',
     exchangeRateTip1: '默认展示最新一天的汇率。',
-    exchangeRateTip2: '数据来源于中国银行每天8:30的中行折算价。',
+    exchangeRateTip2: '数据来源于中国银行每天的中行折算价。',
     exchangeRateTip3: '你可以访问中国银行网页',
     BOCConversionPrice: '中行折算价',
     BOCReleaseTime: '中行发布时间',

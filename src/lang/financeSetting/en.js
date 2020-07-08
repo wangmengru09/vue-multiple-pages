@@ -6,7 +6,7 @@ export default {
     declareValue: 'Declare Value',
     insuranceRate: 'Insurance Rate',
     exchangeRateTip1: "The latest day's prices are displayed by default.",
-    exchangeRateTip2: 'The data comes from the BOC daily conversion price at 8:30.',
+    exchangeRateTip2: 'The data comes from the BOC daily conversion price.',
     exchangeRateTip3: 'You can refer to BOC.',
     BOCConversionPrice: 'BOC Conversion Price',
     BOCReleaseTime: 'BOC Release Time',

@@ -160,7 +160,7 @@
 <script>
 import { AgGridVue } from 'ag-grid-vue'
 import Pagination from '@/components/Pagination/index'
-import AG_GRID_DATA from '@/utils/data/agGrid'
+import AG_GRID_DATA from '@/utils/agGrid'
 import RETURN_DATA from '@I/utils/data/financeSetting/chargeZone'
 import { HAS_SELECTED_ROWS } from '@/utils/common'
 import { finance } from '@I/api/requestUrl'

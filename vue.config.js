@@ -15,38 +15,19 @@ const name = defaultSettings.title || 'eTower' // page title
 // port = 9528 npm run dev OR npm run dev --port = 9528
 const port = process.env.port || process.env.npm_config_port || 3000 // dev port
 
-const projectname = process.argv[3]
-const glob = require('glob')
+const projectname = process.argv[5]
 
 function getPages() {
   let entries = {}
-  if (process.env.NODE_ENV == 'production') {
-    entries = {
-      index: {
-        // page的入口
-        entry: 'src/viewpages/' + projectname + '/main.js',
-        // 模板来源
-        template: 'public/index.html',
-        // 在 dist/index.html 的输出
-        filename: 'index.html',
-        chunks: ['chunk-vendors', 'chunk-common', 'index']
-      }
-    }
-  } else {
-    const items = glob.sync( './src/viewpages/*/*.js')
-    for (let i in items) {
-      const filepath = items[i]
-      const fileList = filepath.split('/')
-      const fileName = fileList[fileList.length-2]
-      entries[fileName] = {
-        entry: `src/viewpages/${fileName}/main.js`,
-        // 模板来源
-        template: `public/index.html`,
-        // 在 dist/index.html 的输出
-        filename: `${fileName}.html`,
-        // 提取出来的通用 chunk 和 vendor chunk。
-        chunks: ['chunk-vendors', 'chunk-common', fileName]
-      }
+  entries = {
+    index: {
+      // page的入口
+      entry: 'src/viewpages/' + projectname + '/main.js',
+      // 模板来源
+      template: 'public/index.html',
+      // 在 dist/index.html 的输出
+      filename: 'index.html',
+      chunks: ['chunk-vendors', 'chunk-common', 'index']
     }
   }
   return entries
